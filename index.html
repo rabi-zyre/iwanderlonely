@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> I wandered lonely as a cloud </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <audio id="clickSound">
+            <source src="backgroundsound.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="landing page">
+            <img class="landingbg" src="svg/landingbg.svg" alt="landingbackground"/>
+            <p class="author">by William Wordsworth</p>
+            <header>I WANDERED LONELY AS A CLOUD</header>
+            <img class="soundon" src="svg/charactersound.svg" alt="soundon"/>
+        </div>
+
+        <div class="first scene">
+            <div class="ui-hint-box" id="hint-first-scene">
+                <span>Hover the second line</span>
+            </div>
+            <p class="line1">I wandered lonely as a cloud</p>
+            <div class="hover-line">
+                <span>That</span>
+                <span>floats</span>
+                <span>on</span>
+                <span>high</span>
+                <span>o'er</span>
+                <span>vales</span>
+                <span>and</span>
+                <span>hills</span>
+            </div>
+            <img class="firstbg" src="svg/firstbg.svg" alt="firstbackground"/>
+        </div>
+
+        <div class="second scene" id="poemSection" onclick="advancePoem()">
+            <div class="ui-hint-box" id="hint-second-scene">
+                <span>Click on the poem and hover the daffodil</span>
+            </div>
+            <img class="daffodil" src="svg/daffodil.svg" alt="daffodil"/>
+            <div class="fournextline" id="line-0">
+                <span>When</span>
+                <span>all</span>
+                <span>at</span>
+                <span>once</span>
+                <span>I</span>
+                <span>saw</span>
+                <span>a</span>
+                <span>crowd,</span>
+            </div>
+            <div class="fournextline" id="line-1">
+                <span>A</span>
+                <span>host,</span>
+                <span>of</span>
+                <span>golden</span>
+                <span>daffodils;</span>
+            </div>
+            <div class="fournextline" id="line-2">
+                <span>Beside</span>
+                <span>the</span>
+                <span>lake,</span>
+                <span>beneath</span>
+                <span>the</span>
+                <span>trees,</span>
+            </div>
+            <div class="fournextline" id="line-3">
+                <span>Fluttering</span>
+                <span>and</span>
+                <span>dancing</span>
+                <span>in</span>
+                <span>the</span>
+                <span>breeze.</span>
+            </div>
+        </div>
+
+        <div class="third scene">
+            <div class="ui-hint-box" id="hint-third-scene">
+                <span>Hover the third line</span>
+            </div>
+            <p class="line7">Continuous as the stars that shine</p>
+            <div class="star-wrapper">
+                <img class="star" src="svg/star.svg" alt="star"/>
+                <img class="bling" src="svg/bling.svg" alt="bling"/>
+            </div>
+            <p class="line8">And twinkle on the milky way,</p>
+            <div class="stretch-line-wrapper">
+                <span class="stretch-line">They stretched in never-ending line</span>
+            </div>
+        </div>
+
+        <div class="fourth scene">
+            <div class="ui-hint-box" id="hint-fourth-scene">
+                <span>Click on the blank space</span>
+            </div>
+            <img class="bay" src="svg/bay.svg" alt="bay"/>
+            <div class="reveal-area" id="revealClickArea">
+                <div class="hidden-lines">
+                    <p><span class="reveal-word">Along</span> the margin of a <span class="reveal-word">bay</span>:</p>
+                    <p>Ten thousand saw I at a <span class="reveal-word">glance</span>,</p>
+                    <p><span class="reveal-word">Tossing</span> their heads in sprightly <span class="reveal-word">dance</span>.</p>
+                    <p>The waves beside them <span class="reveal-word">danced</span>; but they</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="fifth scene">
+            <div class="ui-hint-box" id="hint-fifth-scene">
+                <span>Click on the two flowers</span>
+            </div>
+            <div class="right-aligned-lines">
+                <p>Out-did the sparkling waves in glee:</p>
+                <p>A poet could not but be gay,</p>
+                <p>In such a jocund company:</p>
+            </div>
+            <img class="leftdaffodil" src="svg/leftdaffodil.svg" alt="leftdaffodil"/>
+            <img class="rightdaffodil" src="svg/rightdaffodil.svg" alt="rightdaffodil"/>
+            <img src="svg/leftbloom.svg" style="display: none;" alt="preload leftbloom">
+            <img src="svg/rightbloom.svg" style="display: none;" alt="preload rightbloom">
+        </div>
+        <div class="sixth scene">
+            <div class="ui-hint-box" id="hint-sixth-scene">
+                <span>Hover around the eye</span>
+            </div>
+            <div class="left-aligned-lines">
+                <p>I gazed—and gazed—but little thought</p>
+                <p>What wealth the show to me had brought:</p>
+            </div>
+            <div class="eyefollow">
+                <img class="eye" src="svg/eye.svg" alt="eye"/>
+                <img class="pupil" src="svg/pupil.svg" alt="pupil"/>
+                <img class="eyeliner" src="svg/eyeliner.svg" alt="eyeliner"/>
+            </div>
+        </div>
+
+        <div class="seventh-scene-container">
+            <div class="ui-hint-box" id="hint-seventh-scene">
+                <span>Click the heart</span>
+            </div>
+            <div class="first-line">
+                <p>For<br>oft<br>when<br>on<br>my<br>couch<br>I<br>lie</p>
+            </div>
+            <div class="second-line">
+                <p>In<br>vacant<br>or<br>in<br>pensive<br>mood,</p>
+            </div>
+            <div class="third-line">
+                <p>They<br>flash<br>upon<br>that<br>inward<br>eye</p>
+            </div>
+            <div class="fourth-line">
+                <p>Which<br>is<br>the<br>bliss<br>of<br>solitude,</p>
+            </div>
+        </div>
+
+        <div class="last scene">
+            <img class="heart" src="svg/heartnotfill.svg" alt="heart" id="heartAnimation"/>
+            <div class="drop-container" id="dropContainer" style="display: none;">
+                <img class="drop" src="svg/drop.svg" alt="drop" id="dropAnimation"/>
+            </div>
+            <div class="flower-container" id="flowerContainer" style="display: none;">
+                <img class="flower-bloom" src="svg/finaldaffodil.svg" alt="flower" id="flowerAnimation"/>
+            </div>
+            <div class="final-daffodils" id="finalDaffodils" style="display: none;">
+                <img class="final-daffodil" src="svg/finaldaffodil.svg" alt="final daffodil"/>
+            </div>
+            <div class="finallines">
+                <p class="final1">And then my heart with pleasure fills,</p>
+                <p class="final2">And dances with</p>
+                <p class="final3">the daffodils.</p>
+            </div>
+        </div>
+        <div class="theend">
+            <p>the end.</p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
